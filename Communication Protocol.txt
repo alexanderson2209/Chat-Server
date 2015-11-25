@@ -1,0 +1,49 @@
+Sequential order:
+
+Client Connects
+Server sends "connected 0" command
+Client sends "login username password"
+Server sends "authenticated 0"
+Server sends "online user1 user2 user3"
+Client sends "msg user1 hey man whats going on blah blah blah blah blah"
+Server sends "msg user2 hey man whats going on blah blah blah blah"
+
+
+
+Server Commands:
+
+connected # error message (#= 0 or -1)
+	0: 	successful
+	-1: unforseen error
+
+error # error message
+	1: Recipient offline
+	2: Unexpected command
+	3: Recipient does not exist
+	4: User already logged in
+
+authenticated #
+	0: Authentication successful
+	1: 	invalid User/PW
+
+online user1 user2 user3
+	user1 etc: users that are currently online
+	
+msg sender message
+	sender:  the person who sent the message
+	message: the actual message being sent
+
+
+
+Client Commands:
+
+msg recipient message
+	recipient: The person who is receiving the message
+	message: the actual message being sent
+
+login username password
+	username: username of the person logging in
+	password: password of the person logging in
+
+disconnect
+	Sends message to server that client is disconnecting

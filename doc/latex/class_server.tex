@@ -1,0 +1,118 @@
+\hypertarget{class_server}{}\section{Server Class Reference}
+\label{class_server}\index{Server@{Server}}
+
+
+A simple multithreaded chat server. Handles client connections, login authentication, and it has chat log support. To start server, initialize it with I\+P and port you desire, and use the \hyperlink{class_server_ab4df36f477b273cd9f08a7e109f16973}{Start()} method.  
+
+
+
+
+{\ttfamily \#include $<$Server.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_server_a1e425dda8d8951eb6f3f89e7742865e6}{Server} (std\+::string port, std\+::string I\+P)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_server}{Server} Ctor. \end{DoxyCompactList}\item 
+\hyperlink{class_server_a1eaaf9ba85b8206fa0aa6925a6a30a08}{Server} (std\+::string port)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_server}{Server} Ctor. Uses default I\+P address of the computer running it. \end{DoxyCompactList}\item 
+\hyperlink{class_server_ad5ec9462b520e59f7ea831e157ee5e59}{Server} ()
+\begin{DoxyCompactList}\small\item\em Default server Ctor. Uses default I\+P address of the computer running it. It uses a default port value of 3810. \end{DoxyCompactList}\item 
+\hyperlink{class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6}{$\sim$\+Server} ()
+\item 
+int \hyperlink{class_server_ab4df36f477b273cd9f08a7e109f16973}{Start} ()
+\item 
+int \hyperlink{class_server_a358f3edffab323d5a454252c707352e6}{Stop} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple multithreaded chat server. Handles client connections, login authentication, and it has chat log support. To start server, initialize it with I\+P and port you desire, and use the \hyperlink{class_server_ab4df36f477b273cd9f08a7e109f16973}{Start()} method. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_server_a1e425dda8d8951eb6f3f89e7742865e6}{}\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\subsubsection[{Server(std\+::string port, std\+::string I\+P)}]{\setlength{\rightskip}{0pt plus 5cm}Server\+::\+Server (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{port, }
+\item[{std\+::string}]{I\+P}
+\end{DoxyParamCaption}
+)}\label{class_server_a1e425dda8d8951eb6f3f89e7742865e6}
+
+
+\hyperlink{class_server}{Server} Ctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port that the server will run on. \\
+\hline
+{\em I\+P} & Specified I\+P that the server will run from. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_server_a1eaaf9ba85b8206fa0aa6925a6a30a08}{}\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\subsubsection[{Server(std\+::string port)}]{\setlength{\rightskip}{0pt plus 5cm}Server\+::\+Server (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{port}
+\end{DoxyParamCaption}
+)}\label{class_server_a1eaaf9ba85b8206fa0aa6925a6a30a08}
+
+
+\hyperlink{class_server}{Server} Ctor. Uses default I\+P address of the computer running it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port that the server will run on. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_server_ad5ec9462b520e59f7ea831e157ee5e59}{}\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\subsubsection[{Server()}]{\setlength{\rightskip}{0pt plus 5cm}Server\+::\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_server_ad5ec9462b520e59f7ea831e157ee5e59}
+
+
+Default server Ctor. Uses default I\+P address of the computer running it. It uses a default port value of 3810. 
+
+\hypertarget{class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6}{}\index{Server@{Server}!````~Server@{$\sim$\+Server}}
+\index{````~Server@{$\sim$\+Server}!Server@{Server}}
+\subsubsection[{$\sim$\+Server()}]{\setlength{\rightskip}{0pt plus 5cm}Server\+::$\sim$\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_server_ab4df36f477b273cd9f08a7e109f16973}{}\index{Server@{Server}!Start@{Start}}
+\index{Start@{Start}!Server@{Server}}
+\subsubsection[{Start()}]{\setlength{\rightskip}{0pt plus 5cm}int Server\+::\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_server_ab4df36f477b273cd9f08a7e109f16973}
+Starts server and begins accepting connections.
+
+\begin{DoxyReturn}{Returns}
+0 if everything went ok, -\/1 otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_server_a358f3edffab323d5a454252c707352e6}{}\index{Server@{Server}!Stop@{Stop}}
+\index{Stop@{Stop}!Server@{Server}}
+\subsubsection[{Stop()}]{\setlength{\rightskip}{0pt plus 5cm}int Server\+::\+Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_server_a358f3edffab323d5a454252c707352e6}
+Stops server, closes all connections, and will free any memory associated with it.
+
+\begin{DoxyReturn}{Returns}
+0 if everything went ok, -\/1 otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Server/\+Server/\hyperlink{_server_8h}{Server.\+h}\item 
+Server/\+Server/\hyperlink{_server_8cpp}{Server.\+cpp}\end{DoxyCompactItemize}

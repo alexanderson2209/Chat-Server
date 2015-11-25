@@ -1,0 +1,198 @@
+\hypertarget{class_client_information}{}\section{Client\+Information Class Reference}
+\label{class_client_information}\index{Client\+Information@{Client\+Information}}
+
+
+\hyperlink{class_client_information}{Client\+Information} holds information about a single client.  
+
+
+
+
+{\ttfamily \#include $<$Client\+Information.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_client_information_a1fe9a21d2ecea1d894be55cba29104e6}{Client\+Information} (int Client\+F\+D, std\+::string name, std\+::string password)
+\begin{DoxyCompactList}\small\item\em Ctor for \hyperlink{class_client_information}{Client\+Information}. \end{DoxyCompactList}\item 
+\hyperlink{class_client_information_a9de9a77b339824c706691893b79a18a7}{$\sim$\+Client\+Information} ()
+\item 
+std\+::string \hyperlink{class_client_information_a12b8606eb3024e12b912d5d885cb226c}{Get\+Name} ()
+\item 
+std\+::string \hyperlink{class_client_information_a5fadcb0b87d421a84615cff3abb95ae8}{Get\+Pass} ()
+\item 
+int \hyperlink{class_client_information_a3d17d21fcb54dda5e049170a551b9d2c}{Get\+Client\+F\+D} ()
+\item 
+void \hyperlink{class_client_information_a6d7fdc020a75aefdb8555b1ec28e0f2c}{Set\+Client\+F\+D} (int Client\+F\+D)
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{class_client_information_a96a85745cf82df2710ec1b137f157b4f}{Get\+Chat\+Log} ()
+\item 
+bool \hyperlink{class_client_information_adf5d94358da6103f56248c04de4072f2}{Set\+Pass} (std\+::string Old\+Pass, std\+::string New\+Pass)
+\item 
+void \hyperlink{class_client_information_a9c13a10fd4adfe477f48f334c61aa788}{Add\+To\+Chat\+Log} (std\+::string Sender, std\+::string Recipient, std\+::string Msg)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_client_information_a86bb07c3a9a52fb4a1ba944dabcbe537}{online}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_client_information}{Client\+Information} holds information about a single client. 
+
+\begin{DoxyAuthor}{Author}
+\$ Author\+: Alex Anderson \$ 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_client_information_a1fe9a21d2ecea1d894be55cba29104e6}{}\index{Client\+Information@{Client\+Information}!Client\+Information@{Client\+Information}}
+\index{Client\+Information@{Client\+Information}!Client\+Information@{Client\+Information}}
+\subsubsection[{Client\+Information(int Client\+F\+D, std\+::string name, std\+::string password)}]{\setlength{\rightskip}{0pt plus 5cm}Client\+Information\+::\+Client\+Information (
+\begin{DoxyParamCaption}
+\item[{int}]{Client\+F\+D, }
+\item[{std\+::string}]{name, }
+\item[{std\+::string}]{password}
+\end{DoxyParamCaption}
+)}\label{class_client_information_a1fe9a21d2ecea1d894be55cba29104e6}
+
+
+Ctor for \hyperlink{class_client_information}{Client\+Information}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Client name \\
+\hline
+{\em password} & Client password \\
+\hline
+{\em Client\+F\+D} & Client file descriptor \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_client_information_a9de9a77b339824c706691893b79a18a7}{}\index{Client\+Information@{Client\+Information}!````~Client\+Information@{$\sim$\+Client\+Information}}
+\index{````~Client\+Information@{$\sim$\+Client\+Information}!Client\+Information@{Client\+Information}}
+\subsubsection[{$\sim$\+Client\+Information()}]{\setlength{\rightskip}{0pt plus 5cm}Client\+Information\+::$\sim$\+Client\+Information (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_client_information_a9de9a77b339824c706691893b79a18a7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_client_information_a9c13a10fd4adfe477f48f334c61aa788}{}\index{Client\+Information@{Client\+Information}!Add\+To\+Chat\+Log@{Add\+To\+Chat\+Log}}
+\index{Add\+To\+Chat\+Log@{Add\+To\+Chat\+Log}!Client\+Information@{Client\+Information}}
+\subsubsection[{Add\+To\+Chat\+Log(std\+::string Sender, std\+::string Recipient, std\+::string Msg)}]{\setlength{\rightskip}{0pt plus 5cm}void Client\+Information\+::\+Add\+To\+Chat\+Log (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{Sender, }
+\item[{std\+::string}]{Recipient, }
+\item[{std\+::string}]{Msg}
+\end{DoxyParamCaption}
+)}\label{class_client_information_a9c13a10fd4adfe477f48f334c61aa788}
+Adds new entry to the clients chat log ~\newline
+Example chat log entry\+: \char`\"{}\+Sender\+: Sender Recipient\+: Recipient Message\+: Msg\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Sender} & Who sent the message \\
+\hline
+{\em Recipient} & Who received the message \\
+\hline
+{\em Msg} & Message content that was sent/received \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_client_information_a96a85745cf82df2710ec1b137f157b4f}{}\index{Client\+Information@{Client\+Information}!Get\+Chat\+Log@{Get\+Chat\+Log}}
+\index{Get\+Chat\+Log@{Get\+Chat\+Log}!Client\+Information@{Client\+Information}}
+\subsubsection[{Get\+Chat\+Log()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ Client\+Information\+::\+Get\+Chat\+Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_client_information_a96a85745cf82df2710ec1b137f157b4f}
+Returns a vector containing all sent/received msg commands
+
+\begin{DoxyReturn}{Returns}
+a vector containing all sent/received msg commands 
+\end{DoxyReturn}
+\hypertarget{class_client_information_a3d17d21fcb54dda5e049170a551b9d2c}{}\index{Client\+Information@{Client\+Information}!Get\+Client\+F\+D@{Get\+Client\+F\+D}}
+\index{Get\+Client\+F\+D@{Get\+Client\+F\+D}!Client\+Information@{Client\+Information}}
+\subsubsection[{Get\+Client\+F\+D()}]{\setlength{\rightskip}{0pt plus 5cm}int Client\+Information\+::\+Get\+Client\+F\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_client_information_a3d17d21fcb54dda5e049170a551b9d2c}
+Client file descritor getter
+
+\begin{DoxyReturn}{Returns}
+Client file descriptor 
+\end{DoxyReturn}
+\hypertarget{class_client_information_a12b8606eb3024e12b912d5d885cb226c}{}\index{Client\+Information@{Client\+Information}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!Client\+Information@{Client\+Information}}
+\subsubsection[{Get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Client\+Information\+::\+Get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_client_information_a12b8606eb3024e12b912d5d885cb226c}
+Client username getter
+
+\begin{DoxyReturn}{Returns}
+Client username 
+\end{DoxyReturn}
+\hypertarget{class_client_information_a5fadcb0b87d421a84615cff3abb95ae8}{}\index{Client\+Information@{Client\+Information}!Get\+Pass@{Get\+Pass}}
+\index{Get\+Pass@{Get\+Pass}!Client\+Information@{Client\+Information}}
+\subsubsection[{Get\+Pass()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Client\+Information\+::\+Get\+Pass (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_client_information_a5fadcb0b87d421a84615cff3abb95ae8}
+Client password getter
+
+\begin{DoxyReturn}{Returns}
+Client password 
+\end{DoxyReturn}
+\hypertarget{class_client_information_a6d7fdc020a75aefdb8555b1ec28e0f2c}{}\index{Client\+Information@{Client\+Information}!Set\+Client\+F\+D@{Set\+Client\+F\+D}}
+\index{Set\+Client\+F\+D@{Set\+Client\+F\+D}!Client\+Information@{Client\+Information}}
+\subsubsection[{Set\+Client\+F\+D(int Client\+F\+D)}]{\setlength{\rightskip}{0pt plus 5cm}void Client\+Information\+::\+Set\+Client\+F\+D (
+\begin{DoxyParamCaption}
+\item[{int}]{Client\+F\+D}
+\end{DoxyParamCaption}
+)}\label{class_client_information_a6d7fdc020a75aefdb8555b1ec28e0f2c}
+Client file descriptor setter
+
+
+\begin{DoxyParams}{Parameters}
+{\em Client\+F\+D} & New client file descriptor \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_client_information_adf5d94358da6103f56248c04de4072f2}{}\index{Client\+Information@{Client\+Information}!Set\+Pass@{Set\+Pass}}
+\index{Set\+Pass@{Set\+Pass}!Client\+Information@{Client\+Information}}
+\subsubsection[{Set\+Pass(std\+::string Old\+Pass, std\+::string New\+Pass)}]{\setlength{\rightskip}{0pt plus 5cm}bool Client\+Information\+::\+Set\+Pass (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{Old\+Pass, }
+\item[{std\+::string}]{New\+Pass}
+\end{DoxyParamCaption}
+)}\label{class_client_information_adf5d94358da6103f56248c04de4072f2}
+Sets password for client ~\newline
+Does some authentication where it checks if client knows old password
+
+
+\begin{DoxyParams}{Parameters}
+{\em Old\+Pass} & Password currently stored for client \\
+\hline
+{\em New\+Pass} & New password\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true = successful password change 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_client_information_a86bb07c3a9a52fb4a1ba944dabcbe537}{}\index{Client\+Information@{Client\+Information}!online@{online}}
+\index{online@{online}!Client\+Information@{Client\+Information}}
+\subsubsection[{online}]{\setlength{\rightskip}{0pt plus 5cm}bool Client\+Information\+::online}\label{class_client_information_a86bb07c3a9a52fb4a1ba944dabcbe537}
+Online status ~\newline
+true = online ~\newline
+false = offline 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Server/\+Server/\hyperlink{_client_information_8h}{Client\+Information.\+h}\item 
+Server/\+Server/\hyperlink{_client_information_8cpp}{Client\+Information.\+cpp}\end{DoxyCompactItemize}
